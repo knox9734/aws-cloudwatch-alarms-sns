@@ -7,6 +7,7 @@ Before you begin, make sure you have the following prerequisites:
 
 An AWS account with appropriate permissions to create resources.
 Terraform installed on your local machine.
+
 Configuration Overview
 The provided Terraform script (main.tf) sets up the following resources:
 
@@ -19,35 +20,32 @@ SNS Subscription: Creates an SNS subscription that sends alarm notifications to 
 RDS Instance: Creates a test Amazon RDS instance for monitoring. You can customize the instance parameters as needed.
 
 CloudWatch Alarms:
-
 Creates a CloudWatch alarm named RDS_Connections_Alarm to monitor RDS database connections. It triggers when the number of connections exceeds the specified threshold.
 Creates a CloudWatch alarm named RDS_CPU_Utilization_Alarm to monitor RDS CPU utilization. It triggers when CPU utilization exceeds the specified threshold.
+
 Usage
 Clone this repository to your local machine.
 
 Navigate to the cloned repository directory:
 
-bash
-Copy code
+
 cd aws-cloudwatch-alarms-sns
+
 Create a terraform.tfvars file to provide values for sensitive variables:
 
-hcl
-Copy code
 aws_access_key = "YOUR_AWS_ACCESS_KEY"
 aws_secret_key = "YOUR_AWS_SECRET_KEY"
+
 Initialize the Terraform configuration:
 
-bash
-Copy code
 terraform init
+
 Review the configuration in main.tf and adjust the resource parameters as needed.
 
 Apply the configuration to create resources:
 
-bash
-Copy code
 terraform apply
+
 Confirm the action with a yes when prompted.
 
 Once the configuration is applied successfully, CloudWatch alarms and SNS notifications will be set up according to the specified parameters.
@@ -57,9 +55,8 @@ To clean up and delete the created resources:
 
 Run the following command:
 
-bash
-Copy code
 terraform destroy
+
 Confirm the action with a yes when prompted.
 
 All created resources, including CloudWatch alarms and the SNS topic, will be deleted.
