@@ -1,4 +1,5 @@
-#AWS CloudWatch Alarms and SNS Notifications Setup
+#AWS CloudWatch Alarms and SNS Notifications Setup#
+###################################################
 This Terraform configuration provides a simple way to create AWS CloudWatch alarms and SNS notifications for monitoring Amazon RDS instances. CloudWatch alarms help you monitor your resources and take automated actions based on the defined criteria. SNS (Simple Notification Service) is used to send notifications about alarm states to specified endpoints, such as email addresses.
 
 Prerequisites
